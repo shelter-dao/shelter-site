@@ -31,10 +31,39 @@ function Body(props){
       break;
     default:
       phrase = "home";
-
   }
 
+  function renderPageHandler(){
+    switch (state) {
+      case 0:
+        return(<Home/>)
+        break;
+      case 1:
+        return(<Work/>)
+        break;
+      case 2:
+        return(<About/>)
+        break;
+      case 3:
+        return(<Contact/>)
+        break;
+      default:
+        phrase = "home";
+    }
+  }
 
+  return(
+    <div>
+      {renderPageHandler()}
+    </div>
+  )
+
+  // This return needs to have a render handler that is called
+  // Depending on the state, it will change the rendering
+
+}
+
+function Home(){
   return(
     <div className="body">
       <div className="shelter-logo">
@@ -56,6 +85,66 @@ function Body(props){
         <Link className="contact-link" to="/contact">  </Link>
         <Link className="home-link" to="/"></Link>
       </nav>
+    </div>
+  )
+}
+
+function Work(){
+  return(
+    <div>
+      <Link className="home-link" to="/">
+        <div className="bottom-polygon">
+        </div>
+        <div className="top-polygon">
+        </div>
+        <div className="triangle">
+        </div>
+        <div className="shadow">
+        </div>
+      </Link>
+      <div class="construction">
+      Build Work Page Here
+      </div>
+    </div>
+  )
+}
+
+function About(){
+  return(
+    <div>
+      <Link className="home-link" to="/">
+        <div className="bottom-polygon">
+        </div>
+        <div className="top-polygon">
+        </div>
+        <div className="triangle">
+        </div>
+        <div className="shadow">
+        </div>
+      </Link>
+      <div class="construction">
+      Build About Page Here
+      </div>
+    </div>
+  )
+}
+
+function Contact(){
+  return(
+    <div>
+      <Link className="home-link" to="/">
+        <div className="bottom-polygon">
+        </div>
+        <div className="top-polygon">
+        </div>
+        <div className="triangle">
+        </div>
+        <div className="shadow">
+        </div>
+      </Link>
+      <div class="construction">
+      Build Contact Page Here
+      </div>
     </div>
   )
 }

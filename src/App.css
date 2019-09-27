@@ -87,7 +87,6 @@ body{
   border-top-right-radius: 85%;
 }
 
-
 .bottom-polygon,
 .bottom-polygon:before,
 .bottom-polygon:after{
@@ -95,6 +94,7 @@ body{
   height: 6em;
   border-top-right-radius: 45%;
 }
+
 .top-polygon,
 .bottom-polygon{
   transform: rotate(-60deg) skewX(-30deg) scale(1,.866);
@@ -151,4 +151,76 @@ body{
   background: var(--red);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 12.5px;
+}
+
+
+/***
+**** Return Home Button
+***/
+
+.home-link{
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  left: 21px;
+  top: 27px;
+}
+
+.home-link .top-polygon,
+.home-link .top-polygon:before,
+.home-link .top-polygon:after{
+  width: .75em;
+  height: .75em;
+  border-top-right-radius: 85%;
+}
+
+.home-link .bottom-polygon{
+  top: 10px;
+  left: 14px;
+}
+
+.home-link .top-polygon{
+  top: 18px;
+  left: 20px;
+}
+
+.home-link .shadow{
+  top: 37.5px;
+  left: 25px;
+  width: 2px;
+  box-shadow: 0px 1.5px  rgba(0, 0, 0, 0.25)
+}
+
+.home-link .bottom-polygon,
+.home-link .bottom-polygon:before,
+.home-link .bottom-polygon:after{
+  width: 1.5em;
+  height: 1.5em;
+  border-top-right-radius: 50%;
+}
+
+.home-link .top-polygon:after,
+.home-link .bottom-polygon:after{
+  box-shadow: 2px 0px 0px rgba(0, 0, 0, .25);
+}
+
+.home-link .top-polygon:before,
+.home-link .bottom-polygon:before{
+  box-shadow:  0px -2px 0px rgba(0, 0, 0, .25);
+}
+
+/***
+**** Work Page
+***/
+
+.construction{
+  padding-top: 200px;
+  padding-bottom: 400px;
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  color: white;
+  /* background: conic-gradient(50% 50%,
+    rgba(40, 79, 22, 0.25) 0%, #284F16 100%); */
+  background: conic-gradient(from 0.56turn at 50% 25%, rgba(40, 79, 22, 0.25)  -50deg,#284F16 400deg);
 }
