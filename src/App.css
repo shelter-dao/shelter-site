@@ -20,3 +20,83 @@
 .App-link {
   color: #09d3ac;
 }
+
+.shelter-logo{
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  left: 87px;
+  top: 284px;
+}
+
+.top-polygon{
+  position: absolute;
+  left: 73px;
+  top: 85px;
+
+  background: #8AB0B8;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.bottom-polygon{
+  position: absolute;
+  top: 35px;
+  left: 45px;
+  /* Green 1 */
+
+  background: #284F16;
+  background-color: #284F16;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.shadow{
+  position: absolute;
+  left: 99px;
+  top: 183px;
+  height: 5px;
+  width: 4px;
+  background: #284F16;
+  box-shadow: 0px 3px  rgba(0, 0, 0, 0.25)
+}
+
+.top-polygon:before,
+.top-polygon:after,
+.bottom-polygon:before,
+.bottom-polygon:after{
+  content: '';
+  position: absolute;
+  background-color: inherit;
+}
+
+.top-polygon,
+.top-polygon:before,
+.top-polygon:after{
+  width:3.5em;
+  height: 3.5em;
+  border-top-right-radius: 80%;
+}
+
+
+.bottom-polygon,
+.bottom-polygon:before,
+.bottom-polygon:after{
+  width: 7em;
+  height: 7em;
+  border-top-right-radius: 45%;
+}
+.top-polygon,
+.bottom-polygon{
+  transform: rotate(-60deg) skewX(-30deg) scale(1,.866);
+}
+
+.top-polygon:before,
+.bottom-polygon:before{
+  transform: rotate(-135deg) skewX(-45deg) scale(1.414,.707) translate(0,-50%);
+  box-shadow:  0px -3.5px 0px rgba(0, 0, 0, .25);
+
+}
+
+.top-polygon:after,
+.bottom-polygon:after{
+  transform: rotate(135deg) skewY(-45deg) scale(.707,1.414) translate(50%);
+  box-shadow: 3px 0px 0px rgba(0, 0, 0, .25);
+}

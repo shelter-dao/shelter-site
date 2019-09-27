@@ -37,7 +37,25 @@ function Body(props){
 
   return(
     <div>
-      <p> The current state is {phrase} </p>
+      <div className="shelter-logo">
+        <div className="bottom-polygon">
+        </div>
+        <div className="top-polygon">
+        </div>
+        <div className="triangle">
+        </div>
+        <div className="shadow">
+        </div>
+      </div>
+      <div>
+        <p> The current state is {phrase} </p>
+      </div>
+      <nav>
+        <Link className="work-link" to="/work"> work </Link>
+        <Link className="about-link" to="/about"> about </Link>
+        <Link className="contact-link" to="/contact"> contact </Link>
+        <Link className="home-link" to="/">home</Link>
+      </nav>
     </div>
   )
 }
@@ -47,12 +65,6 @@ function App() {
   return (
     <Router>
       <div>
-        <nav>
-          <Link className="link" to="/work"> work </Link>
-          <Link className="link" to="/about"> about </Link>
-          <Link className="link" to="/contact"> contact </Link>
-          <Link className="link" to="/">home</Link>
-        </nav>
         <Route path="/" exact render={ () => (<Body state={0} />)} />
         <Route path="/work" render={ () => (<Body state={1} />)} />
         <Route path="/about" render={ () => (<Body state={2} />)} />
