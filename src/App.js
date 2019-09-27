@@ -36,7 +36,7 @@ function Body(props){
 
 
   return(
-    <div>
+    <div className="body">
       <div className="shelter-logo">
         <div className="bottom-polygon">
         </div>
@@ -47,14 +47,14 @@ function Body(props){
         <div className="shadow">
         </div>
       </div>
-      <div>
-        <p> The current state is {phrase} </p>
+      <div className="shelter-title">
+        <p> shelter </p>
       </div>
-      <nav>
-        <Link className="work-link" to="/work"> work </Link>
-        <Link className="about-link" to="/about"> about </Link>
-        <Link className="contact-link" to="/contact"> contact </Link>
-        <Link className="home-link" to="/">home</Link>
+      <nav className="navbar">
+        <Link className="work-link" to="/work">  </Link>
+        <Link className="about-link" to="/about">  </Link>
+        <Link className="contact-link" to="/contact">  </Link>
+        <Link className="home-link" to="/"></Link>
       </nav>
     </div>
   )
