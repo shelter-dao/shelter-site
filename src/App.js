@@ -82,8 +82,6 @@ function Work(){
         </div>
         <div className="triangle">
         </div>
-        <div className="shadow">
-        </div>
       </Link>
       <div class="construction-work">
       </div>
@@ -137,8 +135,7 @@ function About(){
         </div>
         <div className="triangle">
         </div>
-        <div className="shadow">
-        </div>
+
       </Link>
       <div class="construction-about">
       </div>
@@ -183,8 +180,6 @@ function Contact(){
         <div className="top-polygon">
         </div>
         <div className="triangle">
-        </div>
-        <div className="shadow">
         </div>
       </Link>
       <div class="construction-contact">
