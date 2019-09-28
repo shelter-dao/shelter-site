@@ -5,6 +5,7 @@ body{
   --green: #284F16;
   --red: #A05A5A;
   --blue: #325A63;
+  --eggshell-white: #F2F2F2;
 }
 
 /***
@@ -180,7 +181,7 @@ body{
 }
 
 .home-link .top-polygon{
-  top: 18px;
+  top: 19px;
   left: 20px;
 }
 
@@ -213,7 +214,7 @@ body{
 **** Work Page
 ***/
 
-.construction{
+.construction-work{
   padding-top: 200px;
   padding-bottom: 400px;
   width: 100vw;
@@ -222,5 +223,284 @@ body{
   color: white;
   /* background: conic-gradient(50% 50%,
     rgba(40, 79, 22, 0.25) 0%, #284F16 100%); */
-  background: conic-gradient(from 0.56turn at 50% 25%, rgba(40, 79, 22, 0.25)  -50deg,#284F16 400deg);
+  background: conic-gradient(from 0.56turn at 50% 25%, rgba(40, 79, 22, 0.25)  -50deg,var(--green) 400deg);
+}
+
+.work-container{
+  position: absolute;
+  width: 225px;
+  height: 60px;
+  left: 109px;
+  top: 200px;
+  background: #8AB0B8;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+}
+
+.project-title{
+  position: absolute;
+  width: 109px;
+  height: 20px;
+  left: 15px;
+  top: calc(50% - 20px/2);
+
+  font-family: Comfortaa;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  /* identical to box height */
+  display: flex;
+  align-items: center;
+  color: #000000;
+}
+
+.project-type{
+  position: absolute;
+  width: 56px;
+  height: 14px;
+  left: 155px;
+  top: calc(50% - 14px/2);
+  font-family: Noto Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 14px;
+  /* identical to box height */
+  display: flex;
+  align-items: center;
+  /* Grey 2 */
+  color: #F2F2F2;
+}
+
+.more-1,
+.more-2,
+.more-3,
+.more-4{
+  position: absolute;
+  width: 225px;
+  height: 60px;
+  background: #7E877D;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+}
+
+.more-1{
+  margin-top: 83px;
+}
+.more-2{
+  opacity: 0.75;
+  margin-top: 166px;
+}
+.more-3{
+  opacity: 0.5;
+  margin-top: 249px;
+}
+.more-4{
+  opacity: 0.25;
+  margin-top: 332px;
+}
+
+.mt-1,
+.mt-2,
+.mt-3,
+.mt-4{
+position: absolute;
+width: 181px;
+height: 20px;
+left: 20px;
+top: calc(50% - 20px/2);
+font-family: Comfortaa;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 20px;
+/* identical to box height */
+display: flex;
+align-items: center;
+/* Grey 2 */
+color: var(--eggshell-white);
+}
+
+.mt-2{
+  opacity: 0.75;
+}
+.mt-3{
+  opacity: 0.5;
+}
+.mt-4{
+  opacity: 0.25;
+}
+
+/***
+**** About Page
+***/
+
+.construction-about{
+  padding-top: 200px;
+  padding-bottom: 400px;
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  color: white;
+  /* background: conic-gradient(50% 50%,
+    rgba(40, 79, 22, 0.25) 0%, #284F16 100%); */
+  background: conic-gradient(from 0.56turn at 50% 25%, rgba(50, 90, 99, 0.5) -50deg,var(--blue) 360deg);
+}
+
+.contact-pill-1,
+.contact-pill-2,
+.contact-pill-3,
+.contact-pill-4{
+  position: absolute;
+  width: 200px;
+  height: 70px;
+  background: #F2F2F2;
+  border-radius: 9px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.contact-pill-1{
+  left: 109px;
+  top: 200px;
+}
+.contact-pill-2{
+  left: 109px;
+  top: 324px;
+}
+.contact-pill-3{
+  left: 109px;
+  top: 449px;
+}
+.contact-pill-4{
+  left: 109px;
+  top: 574px;
+}
+
+.contact-img{
+  position: absolute;
+  width: 50px;
+  height: 40px;
+  left: calc(50% - 50px/2);
+  top: calc(50% - 40px/2 - 0px);
+}
+
+.about-text{
+  position: absolute;
+  width: 215px;
+  height: 250px;
+  left: 109px;
+  top: 200px;
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 19px;
+
+  color: var(--eggshell-white);
+}
+
+.about-section{
+  padding-bottom: 10px;
+}
+
+
+/***
+**** Contact Page
+***/
+
+.construction-contact{
+  padding-top: 200px;
+  padding-bottom: 400px;
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  color: white;
+  /* background: conic-gradient(50% 50%,
+    rgba(40, 79, 22, 0.25) 0%, #284F16 100%); */
+  background: conic-gradient(from 0.56turn at 50% 25%, rgba(160, 90, 90, 0.5)  -50deg,var(--red) 360deg);
+}
+
+/***
+**** Nav Bar
+***/
+
+.navbar-1,
+.navbar-2,
+.navbar-3{
+  position: absolute;
+  width: 50px;
+  height: 180px;
+  left: 21px;
+  top: 200px;
+  border-radius: 5px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/*keeping this as 3 diffenet classes in case we decide to go back to colored nav bar*/
+
+.navbar-1{
+  background: var(--green);
+}
+.navbar-2{
+  background: var(--blue);
+}
+.navbar-3{
+  background: var(--red);
+}
+
+.nav-work,
+.nav-contact,
+.nav-about{
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 6.25px;
+}
+
+.nav-work{
+  background-color: var(--green);
+  left: 12.5px;
+  top: 20px;
+}
+.nav-about{
+  background-color: var(--blue);
+  left: 12.5px;
+  top: 75px;
+}
+.nav-contact{
+  background-color: var(--red);
+  left: 12.5px;
+  top: 130px;
+}
+
+/***
+**** HEADERS
+***/
+
+.header-bar{
+  position: absolute;
+  width: 200px;
+  height: 0px;
+  left: 107px;
+  top: 161px;
+
+  /* Grey 2 */
+
+  border: 6px solid #F2F2F2;
+}
+
+.title-header{
+  position: absolute;
+  width: 122px;
+  height: 54px;
+  left: 110px;
+  top: 90px;
+  color: var(--eggshell-white);
+  font-family: Comfortaa;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 48px;
+  line-height: 54px;
 }

@@ -14,24 +14,6 @@ import {BrowserRouter as Router, Route, Link} from "react-router-dom"
 
 function Body(props){
   const [state,setState] = useState(props.state);
-  let phrase;
-
-  switch (state) {
-    case 0:
-      phrase = "home";
-      break;
-    case 1:
-      phrase = "work";
-      break;
-    case 2:
-      phrase = "about";
-      break;
-    case 3:
-      phrase = "contact";
-      break;
-    default:
-      phrase = "home";
-  }
 
   function renderPageHandler(){
     switch (state) {
@@ -47,14 +29,15 @@ function Body(props){
       case 3:
         return(<Contact/>)
         break;
-      default:
-        phrase = "home";
     }
   }
 
   return(
     <div>
-      {renderPageHandler()}
+
+      <div>
+        {renderPageHandler()}
+      </div>
     </div>
   )
 
@@ -102,8 +85,43 @@ function Work(){
         <div className="shadow">
         </div>
       </Link>
-      <div class="construction">
-      Build Work Page Here
+      <div class="construction-work">
+      </div>
+      <NavBar navState={1}/>
+      <div className="title-header">
+      Work
+      </div>
+      <div className="header-bar">
+      </div>
+      <div className="work-container">
+        <a href={"https://github.com/MemeMerchant/CodeBase"} className= "work-pill">
+          <div className="project-title">
+          MemeMerchant
+          </div>
+          <div className="project-type">
+          exploratory
+          </div>
+        </a>
+        <div className= "more-1">
+          <div className="mt-1">
+            More to come soon
+          </div>
+        </div>
+        <div className= "more-2">
+          <div className="mt-2">
+            More to come soon
+          </div>
+        </div>
+        <div className= "more-3">
+          <div className="mt-3">
+            More to come soon
+          </div>
+        </div>
+        <div className= "more-4">
+          <div className="mt-4">
+            More to come soon
+          </div>
+        </div>
       </div>
     </div>
   )
@@ -122,8 +140,35 @@ function About(){
         <div className="shadow">
         </div>
       </Link>
-      <div class="construction">
-      Build About Page Here
+      <div class="construction-about">
+      </div>
+      <NavBar navState={2}/>
+      <div className="title-header">
+      About
+      </div>
+      <div className="header-bar">
+      </div>
+      <div className="about-text">
+        <div className="about-section">
+         A distributed network of engineers, developers, designers
+         and technical creatives solving problems and playfully
+         exploring technology with an emphasis on delivering value,
+         small or large.
+        </div>
+        <div className="about-section">
+          A safe haven for freelancers to explore and improve the world through their work
+        </div>
+        <div className="about-section">
+          A crowd-sourced fund dedicated to venture philanthropy, investing in long-term development
+          initiatives make the world a shelter for humanity
+        </div>
+        <div className="about-section">
+          Artistically solve problems and create value through technological development
+        </div>
+        <div className="about-section">
+          Drives technological, financial, and educational growth through
+          compassionate technology and venture philanthropy
+        </div>
       </div>
     </div>
   )
@@ -142,11 +187,43 @@ function Contact(){
         <div className="shadow">
         </div>
       </Link>
-      <div class="construction">
-      Build Contact Page Here
+      <div class="construction-contact">
+      </div>
+      <NavBar navState={3}/>
+      <div className="title-header">
+      Contact
+      </div>
+      <div className="header-bar">
+      </div>
+      <div className="contact-pill-1">
+        <img className="contact-img" src={require("./Mail-Icon.svg")}/>
+      </div>
+      <div className="contact-pill-2">
+        <img className="contact-img" src={require("./Vector.svg")}/>
+      </div>
+      <div className="contact-pill-3">
+        <img className="contact-img" src={require("./Bitcoin-Icon.svg")}/>
+      </div>
+      <div className="contact-pill-4">
+        <img className="contact-img" src={require("./Ethereum_logo.svg")}/>
       </div>
     </div>
   )
+}
+
+function NavBar(props){
+  const [navState,setNavState] = useState(props.navState);
+
+  return(
+    <div>
+      <div className={"navbar-" + navState}>
+        <Link className="nav-work" to="/work"> </Link>
+        <Link className="nav-about" to="/about"> </Link>
+        <Link className="nav-contact" to="/contact">  </Link>
+      </div>
+    </div>
+  )
+
 }
 
 
