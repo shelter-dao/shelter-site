@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, Component} from 'react'
 import logo from './logo.svg';
 import './App.css';
 import {BrowserRouter as Router, Route, Link} from "react-router-dom"
@@ -221,16 +221,29 @@ function NavBar(props){
 
 }
 
+class ScrollToTop extends Component {
+  componentDidUpdate(prevProps) {
+    if (this.props.location !== prevProps.location) {
+      window.scrollTo(0, 0)
+    }
+  }
+
+  render() {
+    return this.props.children
+  }
+}
 
 function App() {
   return (
     <Router>
-      <div>
-        <Route path="/" exact render={ () => (<Body state={0} />)} />
-        <Route path="/work" render={ () => (<Body state={1} />)} />
-        <Route path="/about" render={ () => (<Body state={2} />)} />
-        <Route path="/contact" render={ () => (<Body state={3} />)} />
-      </div>
+      <ScrollToTop>
+        <div>
+          <Route path="/" exact render={ () => (<Body state={0} />)} />
+          <Route path="/work" render={ () => (<Body state={1} />)} />
+          <Route path="/about" render={ () => (<Body state={2} />)} />
+          <Route path="/contact" render={ () => (<Body state={3} />)} />
+        </div>
+      </ScrollToTop>
     </Router>
   )
 };
